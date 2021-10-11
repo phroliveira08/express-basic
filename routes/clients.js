@@ -1,12 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const clientsControllers = require('../controllers/clients')
 
-router.get('/new', (req, res) => {
-  res.send('Cliente criado.')
-})
+router.get('/new', clientsControllers.create)
 
-router.get('/list', (req, res) => {
-  res.send('Lista de clientes.')
-})
+router.get('/list', clientsControllers.list)
 
 module.exports = router
