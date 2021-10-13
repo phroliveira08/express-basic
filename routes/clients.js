@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const clientsControllers = require('../controllers/clients')
+const controller = require('../controllers/clients')
 
-router.get('/new', clientsControllers.create)
+router.get('/new', controller.create)
 
-router.get('/list', clientsControllers.list)
+router.get('/list', controller.list)
 
 module.exports = router

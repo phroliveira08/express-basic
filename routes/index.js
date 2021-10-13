@@ -1,7 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const indexController = require('../controllers/index')
+const controller = require('../controllers/index')
 
-router.get('/', indexController.home)
+router.get('/', controller.home)
+
+router.get('/calc', controller.calc)
+
+router.get('/par/:num', controller.isPar)
 
 module.exports = router
